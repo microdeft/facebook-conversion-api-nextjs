@@ -92,7 +92,7 @@ const eventHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   const response = await sendServerSideEvent(payload);
 
-  const success = response?.events_received === 1 ?? false;
+  const success = response?.events_received === 1;
 
   if (process.env.NEXT_PUBLIC_FB_DEBUG === 'true') {
     return res.status(200).json({

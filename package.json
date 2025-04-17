@@ -9,6 +9,9 @@
     "./handlers": "./dist/handlers/index.js",
     "./components": "./dist/components/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "watch": "tsc --watch",
     "build": "tsc --build",
@@ -38,9 +41,9 @@
     "react-dom": "^16 || ^17 || ^18 || ^19"
   },
   "devDependencies": {
-    "@types/node": "^18.16.1",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.1",
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
     "@types/uuid": "^9.0.1",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
     "@typescript-eslint/parser": "^5.59.1",
@@ -54,7 +57,7 @@
     "next": "^14.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.8.3"
   },
   "keywords": [
     "facebook-conversion-api",
