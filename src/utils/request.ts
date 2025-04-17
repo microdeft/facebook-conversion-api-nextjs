@@ -50,7 +50,10 @@ const getClientFbc = (req: NextApiRequest): string => {
     const url = new URL(req.headers.referer);
 
     if (url.searchParams.has('fbclid')) {
-      return url.searchParams.get('fbclid') ?? '';
+      const fbclid = url.searchParams.get('fbclid') ?? '';
+      // Format it according to Facebook's requirements: fb.1.{timestamp}.{fbclid}
+      const timestamp = Math.floor(Date.now() / 1000); // Current timestamp in seconds
+      return `fb.1.${timestamp}.${fbclid}`;
     }
   }
 
